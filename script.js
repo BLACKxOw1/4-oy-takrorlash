@@ -221,5 +221,265 @@
 
 
 
+// //                                                                 FN1
 
 
+
+
+// function getOddDividersSum(n) {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 0 && i % 2 === 1) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
+// let n = 30;
+// console.log(getOddDividersSum(n))
+
+
+
+// //                                                                 FN2
+
+
+// function search(arr, str) {
+//   str = str.toLowerCase();
+//   return arr.filter(name => name.toLowerCase().includes(str));
+// }
+
+// let arr = ["Abdulaziz", "Shahobiddin", "Shohrux", "Shukurjon", "Azamat", "Rahmatulla"];
+// let str = "az";
+
+// console.log(search(arr, str)); 
+
+
+
+// //                                                                 FN3
+
+
+// function getDividers(arr, n) {
+//   let res = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % n === 0) {
+//       res += arr[i]
+//     }
+//   }
+//   return res
+// }
+
+// let arr = [2, 5, 7, 10, 0, 18, 15];
+// let n = 5;
+
+// console.log(getDividers(arr, n)); 
+
+
+
+// //                                                                 FN4
+
+
+// function checkSentence(str) {
+//   if (!str || str.length === 0) return false;
+//   return str[0] === str[0].toUpperCase() && str.endsWith(".");
+// }
+
+// let str = "Abdulaziz programmer is full-stack developer.";
+
+// console.log(checkSentence(str)); 
+
+
+
+// //                                                                 FN5
+
+
+// function getNumberOfCases(str) {
+//   let upperCases = 0
+//   let lowerCases = 0
+//   if (!str || str.length === 0) return false;
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (/[A-Z]/.test(char)) {
+//       upperCases++;
+//     } else if (/[a-z]/.test(char)) {
+//       lowerCases++;
+//     }
+//   }
+//   return `  upperCases:${upperCases} \n  lowerCases:${lowerCases}`
+// }
+
+// let str = "Abdulaziz Programmer";
+
+// console.log(getNumberOfCases(str)); 
+
+
+
+// //                                                                 FN6
+
+
+// function changeObjToString(obj) {
+//   let keys = Object.keys(obj).join("");
+//   let values = Object.values(obj).join("");
+
+//   return keys + values;
+
+// }
+
+// let obj = {a: 1, b: 2, c: 3};
+
+// console.log(changeObjToString(obj)); 
+
+
+
+// //                                                                 FN7
+
+
+// const products = [
+//   { id: 1, name: 'Bike', price: 100 },
+//   { id: 2, name: 'TV', price: 400 },
+//   { id: 3, name: 'Album', price: 800 },
+//   { id: 4, name: 'Book', price: 600 },
+//   { id: 5, name: 'Phone', price: 500 },
+//   { id: 6, name: 'Computer', price: 1000 },
+//   { id: 7, name: 'Skate', price: 300 },
+//   { id: 8, name: 'Keyboard', price: 200 },
+//   { id: 9, name: 'Bottle', price: 700 },
+// ];
+
+// function getProductsSum(...ids) {
+//   return ids.reduce((sum, id) => {
+//     const product = products.find(p => p.id === id);
+//     return product ? sum + product.price : sum;
+//   }, 0);
+// }
+
+// console.log(getProductsSum(4, 6, 9));
+
+
+
+// //                                                                 FN8
+
+
+// const products = [
+//   { id: 1, name: 'Bike', price: 100 },
+//   { id: 2, name: 'TV', price: 400 },
+//   { id: 3, name: 'Album', price: 800 },
+//   { id: 4, name: 'Book', price: 600 },
+//   { id: 5, name: 'Phone', price: 500 },
+//   { id: 6, name: 'Computer', price: 1000 },
+//   { id: 7, name: 'Skate', price: 300 },
+//   { id: 8, name: 'Keyboard', price: 200 },
+//   { id: 9, name: 'Bottle', price: 700 },
+// ];
+
+// function getTopProducts(products ,n) {
+//   const sorted = [...products].sort((a, b) => b.price - a.price);
+
+//   return sorted.slice(0, n).map(p => p.name);
+// }
+
+// let n = 3;
+
+// console.log(getTopProducts(products, n));
+
+
+
+// //                                                                 FN9
+
+
+// let str = "Abdulaziz Programmer"
+
+// String.prototype.count = function (char) {
+//   let count = 0;
+//   for (let i = 0; i < this.length; i++) {
+//     if (this[i] === char) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// let char = 'a';
+
+// console.log(str.count(char));
+
+
+
+// //                                                                 FN10
+
+
+// function Product(name, company, price, discount) {
+//   this.name = name
+//   this.company = company
+//   this.price = price
+//   this.discount = discount
+// }
+
+// Product.prototype.getInfo = function () {
+//   console.log(`${this.company} kompaniyasi tomonidan ishlab chiqarilgan ${this.name} ning asl narxi ${this.price}$. Aksiyadagi narxi esa ${this.discount}$`);
+// }
+
+// let p1 = new Product("Iphone 15", "Apple", 1500, 1200);
+// let p2 = new Product("S22", "Samsung", 1200, 800);
+
+// p1.getInfo();
+// p2.getInfo();
+
+
+
+
+
+
+
+
+
+
+
+// //                                                                New FN1
+
+
+// function getSum(n) {
+//   let oddProduct = 1;
+//   let evenProduct = 1;
+//   for (let i = 1; i <= 2 * n; i++) {
+//     if (i % 2 === 0) {
+//       evenProduct *= i;
+//     } else {
+//       oddProduct *= i;
+//     }
+//   }
+//   return oddProduct + evenProduct;
+// }
+
+// let n = 3;
+// console.log(getSum(n));
+
+
+
+// //                                                                New FN2
+
+
+// function getHighestNumberOfDigits(arr) {
+//   return arr.reduce((maxNum, current) => {
+//     return String(current).length > String(maxNum).length ? current : maxNum;
+//   });
+// }
+
+// let arr = [1589, 31851, 512, 180975, 78];
+
+// console.log(getHighestNumberOfDigits(arr));
+
+
+
+//                                                                New FN3
+
+
+function getHighestNumberOfDigits(arr) {
+  return arr.reduce((maxNum, current) => {
+    return String(current).length > String(maxNum).length ? current : maxNum;
+  });
+}
+
+let arr = [1589, 31851, 512, 180975, 78];
+
+console.log(getHighestNumberOfDigits(arr));
