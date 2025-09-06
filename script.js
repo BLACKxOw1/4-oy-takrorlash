@@ -471,15 +471,174 @@
 
 
 
-//                                                                New FN3
+// //                                                                New FN3
 
 
-function getHighestNumberOfDigits(arr) {
-  return arr.reduce((maxNum, current) => {
-    return String(current).length > String(maxNum).length ? current : maxNum;
-  });
-}
+// function getStringArr(arr) {
+//   let newArr = []
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === String(arr[i])) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr
+// }
 
-let arr = [1589, 31851, 512, 180975, 78];
+// let arr = [1, "Abdulaziz", "Elbek", false, [], "Jurabek", {}];
 
-console.log(getHighestNumberOfDigits(arr));
+// console.log(getStringArr(arr));
+
+
+
+// //                                                                New FN4
+
+
+// function getStringArr(arr) {
+//   let count = 0
+//   let trueAnswers = ['!', ',', '.', ':', ';', '?'];
+//   for (const v of arr) {
+//     for (let i = 0; i < trueAnswers.length; i++) {
+//       if (v === trueAnswers[i]) {
+//         count++
+//       }
+//     }
+//   }
+//   return count
+// }
+
+// const punctuationSigns = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~', "'"];
+
+// console.log(getStringArr(punctuationSigns));
+
+
+
+// //                                                                New FN5
+
+
+// function switchLetters(str) {
+//   let newArr = []
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i]
+//     if (/[a-z]/.test(char)) {
+//       newArr.push(char.toUpperCase())
+//     } else if (/[A-Z]/.test(char)) {
+//       newArr.push(char.toLowerCase())
+//     } else {
+//       newArr.push(char)
+//     }
+//   }
+
+//   return newArr.join("")
+// }
+
+// const arr = "Abdulaziz Programmer"
+// console.log(switchLetters(arr)) 
+
+
+
+// //                                                                New FN6
+
+// function changeObjToArr(obj) {
+//   return Object.entries(obj).map(([key, value]) => key + value)
+// }
+
+// let obj = { a: 1, b: 2, c: 3 }
+
+// console.log(changeObjToArr(obj));
+
+
+
+// //                                                                New FN7
+
+// function seperateStudents(students) {
+//   let result = {
+//     grant: [],
+//     contract: []
+//   }
+
+//   for (let student of students) {
+//     if (student.isGrant) {
+//       result.grant.push(student.name)
+//     } else {
+//       result.contract.push(student.name)
+//     }
+//   }
+
+//   return result
+// }
+
+// let students = [
+//   { name: "Jurabek", isGrant: false },
+//   { name: "Elbek", isGrant: true },
+//   { name: "Shamshod", isGrant: false },
+//   { name: "Kamola", isGrant: false },
+//   { name: "Gulnoza", isGrant: true },
+//   { name: "Savlatbek", isGrant: false },
+// ]
+
+// console.log(seperateStudents(students))
+
+
+
+// //                                                                New FN8
+
+// function getTotalPages(books) {
+//   let result = 0
+
+//   for (let book of books) {
+//     if (book.isReadFinished) {
+//       result += book.pages
+//     }
+//   }
+
+//   return result
+// }
+
+// const books = [
+//   { name: "The Great Gatsby", pages: 180, isReadFinished: true },
+//   { name: "To Kill a Mockingbird", pages: 336, isReadFinished: false },
+//   { name: "Atom habits", pages: 328, isReadFinished: true },
+//   { name: "Pride and Prejudice", pages: 432, isReadFinished: false },
+//   { name: "The Catcher in the Rye", pages: 224, isReadFinished: true },
+//   { name: "The Hobbit", pages: 310, isReadFinished: false },
+//   { name: "The Lord of the Rings", pages: 1178, isReadFinished: true },
+//   { name: "Harry Potter", pages: 320, isReadFinished: true },
+//   { name: "Fahrenheit 451", pages: 249, isReadFinished: false },
+//   { name: "To the Lighthouse", pages: 209, isReadFinished: true }
+// ];
+
+// console.log(getTotalPages(books));
+
+
+
+// //                                                                New FN9
+
+// Object.prototype.keys = function () {
+//   console.log(Object.keys(this))
+// }
+
+// let obj = { a: 1, b: 2, c: 3 }
+// obj.keys()
+
+
+
+// //                                                                New FN10
+
+// function Student(firstName, lastName, university, course, totalYears, isGrant) {
+//   this.firstName = firstName
+//   this.lastName = lastName
+//   this.university = university
+//   this.course = course
+//   this.totalYears = totalYears
+//   this.isGrant = isGrant
+// }
+
+// Student.prototype.getInfo = function () {
+//   let restYears = this.totalYears - this.course
+//   let checkGrant = this.isGrant ? 'grant' : 'kontrakt'
+//   return `${this.firstName} ${this.lastName} ${this.university} universitetida ${this.course}-kursda ${checkGrant} asosida o'qiydi. ${restYears} yildan keyin universitetidan qutuladi.`
+// }
+
+// let student = new Student("Abdulaziz", "Programmer", "TATU", 3, 4, true);
+
+// console.log(student.getInfo());
